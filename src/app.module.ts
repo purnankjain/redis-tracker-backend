@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ClientSocketGateway } from './gateway/client-socket.gateway';
 import { TrackerModule } from './modules/tracker/tracker.module';
+import { ServicesModule } from './services/services.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { TrackerModule } from './modules/tracker/tracker.module';
       },
     }),
     TrackerModule,
+    ServicesModule,
   ],
   controllers: [AppController],
   providers: [AppService, ClientSocketGateway],
